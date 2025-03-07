@@ -12,7 +12,8 @@
     "dot:report": "npx playwright test --reporter=dot",
     "line:report": "npx playwright test --reporter=line",
     "allure": "allure generate ./allure-results --clean && allure open ./allure-report",
-    "report": "playwright show-report playwright-report"
+    "report": "playwright show-report playwright-report",
+    "format": "npx prettier --write ."
   },
   "keywords": [],
   "author": "Harshit Bhardwaj",

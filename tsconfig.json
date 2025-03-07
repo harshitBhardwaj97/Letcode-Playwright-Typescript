@@ -8,12 +8,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "**/*.ts",
-    "tests/**/*.ts",
-    "playwright.config.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "tests/**/*.ts", "playwright.config.ts"],
+  "exclude": ["node_modules"]
 }
