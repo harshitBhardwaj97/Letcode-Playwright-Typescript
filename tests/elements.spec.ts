@@ -25,26 +25,25 @@ test.describe("Elements page tests", () => {
         await expect(image).toBeVisible()
         expect(await userName.textContent()).toBe("Harshit Bhardwaj")
 
-        const newPage = await page.context().newPage()
-        await newPage.goto(`https://github.com/${userNameToBeEntered}`)
+        // Get number of public repos using API
+        const response = await fetch(`https://api.github.com/users/${userNameToBeEntered}`)
+        const data = await response.json()
 
-        const expectedPublicRepos = await newPage.locator("//a[contains(@data-tab-item,'repositories')]//span[contains(@class,'Counter')]")
-            .first().textContent()
-
-        console.log(`No. of public repositories: ${expectedPublicRepos}`);
-
-        await newPage.close()
+        // Extract the number of public repositories
+        const expectedPublicRepos = data.public_repos
+        console.log(`No. of public repositories: ${expectedPublicRepos}`)
 
         const publicReposLocator = page.locator("//span[.='Public Repos']//following-sibling::span")
         const publicReposText = await publicReposLocator.textContent()
+
         //@ts-ignore
-        expect(parseInt(publicReposText)).toEqual(parseInt(expectedPublicRepos))
+        expect(parseInt(publicReposText)).toEqual(expectedPublicRepos)
 
         const displayedPublicRepos = page.$$("//div[@class='content p-4']//li")
         const publicRepos = await displayedPublicRepos
 
-        //@ts-ignore
-        expect(publicRepos.length).toBeLessThanOrEqual(parseInt(expectedPublicRepos))
+        // @ts-ignore
+        expect(publicRepos.length).toBeLessThanOrEqual(expectedPublicRepos)
 
         console.log(`The displayed public repos are :-`)
         for (const repo of publicRepos) {

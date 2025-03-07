@@ -1,5 +1,6 @@
-import {defineConfig, devices} from '@playwright/test';
-import {BIG_TIMEOUT, EXPECT_TIMEOUT} from "./constants/timeout-constants";
+import {defineConfig, devices} from '@playwright/test'
+import {BIG_TIMEOUT, EXPECT_TIMEOUT} from "./constants/timeout-constants"
+import * as os from "node:os"
 
 /**
  * Read environment variables from file.
@@ -21,14 +22,23 @@ export default defineConfig({
     /* Fail the build on CI if you accidentally left test.only in the source code. */
     forbidOnly: process.env.CI === 'true',
     /* Retry on CI only */
-    retries: process.env.CI === 'true' ? 3 : 1,
+    retries: process.env.CI === 'true' ? 0 : 1,
     /* Opt out of parallel tests on CI. */
     workers: process.env.CI === 'true' ? 6 : 3,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     reporter: [
         ["line"],
+        ["dot"],
         ["html"],
-        ["allure-playwright", {resultsDir: "allure-results",},],
+        ["allure-playwright", {
+            resultsDir: "allure-results",
+            environmentInfo: {
+                os_platform: os.platform(),
+                os_release: os.release(),
+                os_version: os.version(),
+                node_version: process.version,
+            },
+        },],
         ["./setup/custom-logger.ts"]
     ],
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -58,12 +68,12 @@ export default defineConfig({
             },
         },
 
-        // {
-        //     name: 'firefox',
-        //     use: {
-        //         ...devices['Desktop Firefox'],
-        //     },
-        // },
+        {
+            name: 'firefox',
+            use: {
+                ...devices['Desktop Firefox'],
+            },
+        },
 
         {
             name: 'webkit',
