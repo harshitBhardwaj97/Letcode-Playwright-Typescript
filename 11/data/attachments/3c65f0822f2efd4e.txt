@@ -1,0 +1,2 @@
+Button's coordinates are -
+{ x: 88, y: 336 }
