@@ -22,9 +22,9 @@ export default defineConfig({
     /* Fail the build on CI if you accidentally left test.only in the source code. */
     forbidOnly: process.env.CI === 'true',
     /* Retry on CI only */
-    retries: process.env.CI === 'true' ? 0 : 1,
+    retries: process.env.CI === 'true' ? 3 : 3,
     /* Opt out of parallel tests on CI. */
-    workers: process.env.CI === 'true' ? 6 : 3,
+    workers: process.env.CI === 'true' ? 1 : 6,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     reporter: [
         ["line"],
@@ -48,7 +48,8 @@ export default defineConfig({
         screenshot: 'only-on-failure',
         video: 'on',
         colorScheme: 'dark',
-        // headless: false,  // Make sure headless mode is off
+        // Run tests in headless mode in CI pipeline
+        headless: process.env.CI === 'true',
         // launchOptions: {
         //     args: ["--start-maximized"],
         // },
