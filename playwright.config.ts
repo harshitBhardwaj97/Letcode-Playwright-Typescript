@@ -39,10 +39,10 @@ export default defineConfig({
         video: 'on',
         colorScheme: 'dark',
         // headless: false,  // Make sure headless mode is off
-        launchOptions: {
-            args: ["--start-maximized"],
-        },
-        viewport: null
+        // launchOptions: {
+        //     args: ["--start-maximized"],
+        // },
+        // viewport: null
     },
     timeout: BIG_TIMEOUT,
     expect: {

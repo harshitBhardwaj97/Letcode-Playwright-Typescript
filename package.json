@@ -4,7 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "ui": "npx playwright test --ui",
+    "test:ui": "npx playwright test --ui",
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:debug": "npx playwright test --debug",
+    "test:headed": "npx playwright test --headed",
+    "post----test": "npx playwright show-report",
+    "dot:report": "npx playwright test --reporter=dot",
+    "line:report": "npx playwright test --reporter=line",
     "allure": "allure generate ./allure-results --clean && allure open ./allure-report",
     "report": "playwright show-report playwright-report"
   },
