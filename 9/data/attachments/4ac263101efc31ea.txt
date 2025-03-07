@@ -1,0 +1,4 @@
+Current text in join box is :- I am good
+Appended text in join box is :- I am good Human
+Text inside getMe box is - ortonikc
+Screenshot saved at: /home/runner/work/Letcode-Playwright-Typescript/Letcode-Playwright-Typescript/screenshots/edit.png
