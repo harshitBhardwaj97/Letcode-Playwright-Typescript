@@ -1,0 +1,26 @@
+{
+  "name": "letcode-playwright-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "ui": "npx playwright test --ui",
+    "allure": "allure generate ./allure-results --clean && allure open ./allure-report",
+    "report": "playwright show-report playwright-report"
+  },
+  "keywords": [],
+  "author": "Harshit Bhardwaj",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.9",
+    "allure-playwright": "^3.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "winston": "^3.17.0"
+  }
+}
