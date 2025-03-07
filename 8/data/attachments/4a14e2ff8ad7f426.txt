@@ -1,0 +1,32 @@
+No. of public repositories: 58
+The displayed public repos are :-
+0 https://github.com/harshitBhardwaj97/API-Automation-Rest-Assured
+1 https://github.com/harshitBhardwaj97/Basic-Number-Filtering
+2 https://github.com/harshitBhardwaj97/Building-SpringBoot-App
+3 https://github.com/harshitBhardwaj97/cal.com
+4 https://github.com/harshitBhardwaj97/CalculatorApp-Appium-Python
+5 https://github.com/harshitBhardwaj97/chai-backend
+6 https://github.com/harshitBhardwaj97/Coding-Bat-Java
+7 https://github.com/harshitBhardwaj97/Express-JS-CRUD-Lab
+8 https://github.com/harshitBhardwaj97/Family-CashCard-Spring
+9 https://github.com/harshitBhardwaj97/FM-3-Column-Card-Section
+10 https://github.com/harshitBhardwaj97/FM-News-Homepage
+11 https://github.com/harshitBhardwaj97/FM-SocialMedia-Dashboard-React
+12 https://github.com/harshitBhardwaj97/FM-Testimonial-Grid-Section
+13 https://github.com/harshitBhardwaj97/Full-Stack-Open-2023-University-of-Helsinki
+14 https://github.com/harshitBhardwaj97/Full-Stack-Open-Pokedex-CICD
+15 https://github.com/harshitBhardwaj97/Goal-Tracker
+16 https://github.com/harshitBhardwaj97/Grafana-K6
+17 https://github.com/harshitBhardwaj97/harshitBhardwaj97
+18 https://github.com/harshitBhardwaj97/Hello-World-Kotlin-SpringBoot
+19 https://github.com/harshitBhardwaj97/idurar-erp-crm
+20 https://github.com/harshitBhardwaj97/IQWave-BubbleShot-Selenium-Java
+21 https://github.com/harshitBhardwaj97/Java-Examples
+22 https://github.com/harshitBhardwaj97/Java-Jackson-Examples
+23 https://github.com/harshitBhardwaj97/Java-Owner8-Examples
+24 https://github.com/harshitBhardwaj97/JDBC-AutoConfig-SpringBoot
+25 https://github.com/harshitBhardwaj97/JDBC-SpringBoot
+26 https://github.com/harshitBhardwaj97/Kreditz-Selenium-Java
+27 https://github.com/harshitBhardwaj97/LambdaTest-Selenium-Playground
+28 https://github.com/harshitBhardwaj97/Learning-NextJS
+29 https://github.com/harshitBhardwaj97/Learning-Typescript
