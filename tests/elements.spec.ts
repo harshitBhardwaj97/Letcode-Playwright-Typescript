@@ -1,4 +1,5 @@
 import {expect, test} from '@playwright/test'
+import {randomBytes} from "node:crypto"
 
 test.beforeEach(async ({page}) => {
     await page.goto('/elements')
@@ -45,7 +46,7 @@ test.describe("Elements page tests", () => {
         const searchInput = page.getByRole('textbox', {name: 'git user name'})
         const searchButton = page.locator("#search")
 
-        const userNameToBeEntered = "random123"
+        const userNameToBeEntered = "random_" + randomBytes(8).toString('hex')
 
         await searchInput.fill(userNameToBeEntered)
         await searchButton.click()

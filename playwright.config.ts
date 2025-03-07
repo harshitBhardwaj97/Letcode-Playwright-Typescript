@@ -23,7 +23,7 @@ export default defineConfig({
     /* Retry on CI only */
     retries: process.env.CI === 'true' ? 3 : 1,
     /* Opt out of parallel tests on CI. */
-    workers: process.env.CI === 'true' ? 3 : 6,
+    workers: process.env.CI === 'true' ? 6 : 3,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     reporter: [
         ["line"],
@@ -65,10 +65,10 @@ export default defineConfig({
         //     },
         // },
 
-        // {
-        //     name: 'webkit',
-        //     use: {...devices['Desktop Safari']},
-        // },
+        {
+            name: 'webkit',
+            use: {...devices['Desktop Safari']},
+        },
 
         /* Test against mobile viewports. */
         // {
