@@ -1,0 +1,1 @@
+Background color is rgb(42, 157, 144)
