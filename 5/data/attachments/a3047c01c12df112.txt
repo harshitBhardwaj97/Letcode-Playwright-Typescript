@@ -1,0 +1,2 @@
+Current text of hold button is -  Button Hold!
+Current text of hold button is -  Button has been long pressed
